@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift</title>
+
+    <style>
+        #answer {
+            padding: 10px;
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <h1>Switch</h1>
+    <p>Simple test</p>
+
+    <div id="answer"></div>
+
+<script>
+    var color = "red";
+
+    switch(color){
+        case "Orange":
+            document.getElementById('answer').innerHTML="Color : Orange";
+            break;
+        
+        case "blue":
+            document.getElementById('answer').innerHTML="Color : blue";
+            break;
+        
+        case "green":
+            document.getElementById('answer').innerHTML="Color : green";
+            break;
+            
+            case "red":
+            document.getElementById('answer').innerHTML="Color : red";
+            break;
+
+        default: 
+            document.getElementById('answer').innerHTML="No color";
+        }
+
+</script>
+
+</body>
+</html>

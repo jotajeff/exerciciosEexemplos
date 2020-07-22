@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Advanced Switch</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <style>
+        body {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body class="bg-secondary">
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h1 class="display-3">Advanced Sample</h1>
+
+            <hr class="my-2">
+
+        </div>
+
+
+        <div class="card text-left bg-primary">
+            <div class="card-header"> Sample </div>
+            <div class="card-body">
+
+                <form>
+                    <input class="form-control form-control-lg" type="number" id="weight" placeholder="type weight"
+                        min="0.5" max="10">
+
+                    <br><br>
+
+                    <select class="form-control form-control-lg" name="fruits" id="fruits">
+
+                        <option value="">-- Escolha uma fruta</option>
+                        <option value="apple">Apple</option>
+                        <option value="lemon">Lemon</option>
+                        <option value="orange">Orange</option>
+
+                    </select>
+
+                    <br><br>
+
+                    <button type="button" class="btn btn-dark" btn-lg btn-block" onclick="balance();">To weight</button>
+                </form>
+            </div>
+        </div>
+        <!-- card -->
+
+        <div class="alert bg-warning" id="result"></div>
+    </div>
+    <!-- container -->
+    <script>
+        function balance() {
+            var fruits = document.getElementById('fruits').value;
+            var weight = document.getElementById('weight').value;
+
+            console.log("Fruits " + fruits);
+            console.log("Weight " + weight);
+
+            if (!weight) {
+                document.getElementById('result').innerHTML = "Peso não informado para " + fruits;
+                document.getElementById('weight').focus();
+                return false;
+            }
+
+            if (!fruits) {
+                document.getElementById('result').innerHTML = "Escolha uma fruta ";
+                document.getElementById('fruits').focus();
+                return false;
+
+            }
+
+            switch (fruits) {
+                case "apple":
+                    document.getElementById("result").innerHTML = "Preço final é $ " + weight * 2.99;
+                    break;
+
+                case "lemon":
+                    document.getElementById("result").innerHTML = "Preço final é $ " + weight * 1.99;
+                    break;
+
+                case "orange":
+                    document.getElementById("result").innerHTML = "Preço final é $ " + weight * 0.99;
+                    break;
+            }
+        }
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+.header {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+    background-color : white;
+    padding: 20px;
+    border: dotted solid #000000;
+
+}
+
+.shadow {
+    -webkit-box-shadow: 2px 1px 21px 0px rgba(0,0,0,0.67);
+-moz-box-shadow: 2px 1px 21px 0px rgba(0,0,0,0.67);
+box-shadow: 2px 1px 21px 0px rgba(0,0,0,0.67);
+}
